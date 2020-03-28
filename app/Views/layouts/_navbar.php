@@ -17,7 +17,7 @@
 				<li class="nav-item<?=
 				$route_path === route_to('about') ? ' active' : '';
 				?>">
-					<a class="nav-link" href="<?= route_to('about') ?>">About Us</a>
+					<a class="nav-link" href="<?= route_to('about') ?>"><?= lang('about.aboutUs') ?></a>
 				</li>
 				<li class="nav-item<?=
 				$route_path === route_to('contact') ? ' active' : '';
