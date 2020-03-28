@@ -33,6 +33,7 @@ class CreateTableContacts extends Migration
 			],
 		]);
 		$this->forge->addPrimaryKey('id');
+		$this->forge->addKey('email');
 		$this->forge->createTable($this->table);
 	}
 
