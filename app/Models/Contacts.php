@@ -1,6 +1,8 @@
 <?php namespace App\Models;
 
+use CodeIgniter\Database\ConnectionInterface;
 use CodeIgniter\Model;
+use CodeIgniter\Validation\ValidationInterface;
 
 class Contacts extends Model
 {
@@ -25,4 +27,15 @@ class Contacts extends Model
 			'rules' => 'required|min_length[10]',
 		],
 	];
+
+	public function __construct(
+		ConnectionInterface &$db = null,
+		ValidationInterface $validation = null
+	) {
+		parent::__construct($db, $validation);
+
+		$this->validationRules['email']['label']   = lang('contacts.email');
+		$this->validationRules['email']['subject'] = lang('contacts.subject');
+		$this->validationRules['email']['message'] = lang('contacts.message');
+	}
 }

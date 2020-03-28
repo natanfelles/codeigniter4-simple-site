@@ -22,7 +22,7 @@
 				<li class="nav-item<?=
 				$route_path === route_to('contact') ? ' active' : '';
 				?>">
-					<a class="nav-link" href="<?= route_to('contact') ?>">Contact</a>
+					<a class="nav-link" href="<?= route_to('contact') ?>"><?= lang('contacts.contact') ?></a>
 				</li>
 			</ul>
 		</div>

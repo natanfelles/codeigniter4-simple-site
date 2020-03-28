@@ -7,24 +7,24 @@
 
 $this->extend('layouts/default');
 $this->section('title');
-echo 'Contact';
+echo lang('contacts.contact');
 $this->endSection();
 $this->section('content');
 ?>
 
-	<h1>Contact</h1>
+	<h1><?= lang('contacts.contact') ?></h1>
 
 <?php
 if ($errors):
 	?>
 	<div class="alert alert-danger">
-		Please, correct the errors below.
+		<?= lang('contacts.messageErrors') ?>
 	</div>
 <?php
 elseif ($success):
 	?>
 	<div class="alert alert-success">
-		Message successful sent!
+		<?= lang('contacts.messageSent') ?>
 	</div>
 <?php
 endif;
@@ -33,7 +33,7 @@ endif;
 	<form action="<?= route_to('contact.create') ?>" method="post">
 		<?= csrf_field() ?>
 		<div class="form-group">
-			<label for="email">Email</label>
+			<label for="email"><?= lang('contacts.email') ?></label>
 			<input class="form-control<?=
 			isset($errors['email']) ? ' is-invalid' : ''
 			?>" type="email" name="email" id="email" value="<?= old('email') ?>">
@@ -44,7 +44,7 @@ endif;
 			<?php endif ?>
 		</div>
 		<div class="form-group">
-			<label for="subject">Subject</label>
+			<label for="subject"><?= lang('contacts.subject') ?></label>
 			<input class="form-control<?=
 			isset($errors['subject']) ? ' is-invalid' : ''
 			?>" type="text" name="subject" id="subject" value="<?= old('subject') ?>">
@@ -55,7 +55,7 @@ endif;
 			<?php endif ?>
 		</div>
 		<div class="form-group">
-			<label for="message">Message</label>
+			<label for="message"><?= lang('contacts.message') ?></label>
 			<textarea class="form-control<?=
 			isset($errors['message']) ? ' is-invalid' : ''
 			?>" name="message" id="message" rows="5"><?= old('message') ?></textarea>
@@ -65,7 +65,7 @@ endif;
 				</div>
 			<?php endif ?>
 		</div>
-		<button class="btn btn-primary">Submit</button>
+		<button class="btn btn-primary"><?= lang('contacts.submit') ?></button>
 	</form>
 <?php
 $this->endSection();
