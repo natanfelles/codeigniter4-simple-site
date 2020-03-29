@@ -35,7 +35,7 @@ class Contacts extends Model
 		parent::__construct($db, $validation);
 
 		$this->validationRules['email']['label']   = lang('contacts.email');
-		$this->validationRules['email']['subject'] = lang('contacts.subject');
-		$this->validationRules['email']['message'] = lang('contacts.message');
+		$this->validationRules['subject']['label'] = lang('contacts.subject');
+		$this->validationRules['message']['label'] = lang('contacts.message');
 	}
 }
