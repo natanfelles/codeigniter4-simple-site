@@ -7,7 +7,6 @@ class Contact extends BaseController
 {
 	public function index()
 	{
-		session()->start();
 		return view('contact', [
 			'errors'  => session()->getFlashdata('errors') ?? [],
 			'success' => session()->getFlashdata('success') ?? false,
