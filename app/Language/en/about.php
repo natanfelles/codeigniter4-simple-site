@@ -1,5 +1,5 @@
 <?php
 return [
-	'aboutUs' => 'About Us',
+	'aboutUs'   => 'About Us',
 	'contactUs' => 'Contact Us',
 ];
