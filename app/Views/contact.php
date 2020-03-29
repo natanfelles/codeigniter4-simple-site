@@ -37,7 +37,7 @@ endif;
 			<label for="email"><?= lang('contacts.email') ?></label>
 			<input class="form-control<?=
 			isset($errors['email']) ? ' is-invalid' : ''
-			?>" type="email" name="email" id="email" value="<?= old('email') ?>">
+			?>" type="email" name="email" id="email" value="<?= old('email') ?>" required>
 			<?php if (isset($errors['email'])): ?>
 				<div class="invalid-feedback">
 					<?= esc($errors['email']) ?>
@@ -48,7 +48,7 @@ endif;
 			<label for="subject"><?= lang('contacts.subject') ?></label>
 			<input class="form-control<?=
 			isset($errors['subject']) ? ' is-invalid' : ''
-			?>" type="text" name="subject" id="subject" value="<?= old('subject') ?>">
+			?>" type="text" name="subject" id="subject" value="<?= old('subject') ?>" minlength="10" required>
 			<?php if (isset($errors['subject'])): ?>
 				<div class="invalid-feedback">
 					<?= esc($errors['subject']) ?>
@@ -59,7 +59,7 @@ endif;
 			<label for="message"><?= lang('contacts.message') ?></label>
 			<textarea class="form-control<?=
 			isset($errors['message']) ? ' is-invalid' : ''
-			?>" name="message" id="message" rows="5"><?= old('message') ?></textarea>
+			?>" name="message" id="message" rows="5" minlength="10" required><?= old('message') ?></textarea>
 			<?php if (isset($errors['message'])): ?>
 				<div class="invalid-feedback">
 					<?= esc($errors['message']) ?>
