@@ -4,6 +4,8 @@ class Home extends BaseController
 {
 	public function index()
 	{
-		return view('home');
+		return view('home', [
+			'title' => lang('home.home'),
+		]);
 	}
 }

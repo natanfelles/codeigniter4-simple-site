@@ -1,11 +1,12 @@
 <?php
 /**
  * @var CodeIgniter\View\View $this
+ * @var string                $title
  */
 
 $this->extend('layouts/default');
 $this->section('title');
-echo 'Page X';
+echo $title;
 $this->endSection();
 $this->section('content');
 ?>

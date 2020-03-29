@@ -11,6 +11,7 @@ class Contact extends BaseController
 		return view('contact', [
 			'errors'  => session()->getFlashdata('errors') ?? [],
 			'success' => session()->getFlashdata('success') ?? false,
+			'title'   => lang('contacts.contact'),
 		]);
 	}
 

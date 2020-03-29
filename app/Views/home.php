@@ -5,7 +5,7 @@
 
 $this->extend('layouts/default');
 $this->section('title');
-echo 'Home';
+echo $title;;
 $this->endSection();
 $this->section('content');
 ?>

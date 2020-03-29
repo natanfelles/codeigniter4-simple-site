@@ -3,11 +3,12 @@
  * @var CodeIgniter\View\View $this
  * @var array                 $errors
  * @var bool                  $success
+ * @var string                $title
  */
 
 $this->extend('layouts/default');
 $this->section('title');
-echo lang('contacts.contact');
+echo $title;
 $this->endSection();
 $this->section('content');
 ?>

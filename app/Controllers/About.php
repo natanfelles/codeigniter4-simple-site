@@ -4,6 +4,6 @@ class About extends BaseController
 {
 	public function index()
 	{
-		return view('about');
+		return view('about', ['title' => lang('about.aboutUs')]);
 	}
 }

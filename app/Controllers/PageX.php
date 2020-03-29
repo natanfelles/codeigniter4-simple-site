@@ -6,6 +6,8 @@ class PageX extends Controller
 {
 	public function index()
 	{
-		return view('page-x');
+		return view('page-x', [
+			'title' => lang('pageX.pageX'),
+		]);
 	}
 }
